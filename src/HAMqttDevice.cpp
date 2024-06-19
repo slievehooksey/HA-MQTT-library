@@ -66,7 +66,11 @@ void HAMqttDevice::manageAvailability(uint16_t keepAliveSecond){
 }
 
 void HAMqttDevice::sendAvailable(){
-    _client->publish(getAvailabilityTopic(), "online");
+    sendAvailable(true);
+}
+
+void HAMqttDevice::sendAvailable(bool available){
+    _client->publish(getAvailabilityTopic(), available ? "online" : "offline");
 }
 
 EspMQTTClient* HAMqttDevice::getClient(){

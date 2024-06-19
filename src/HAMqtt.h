@@ -96,6 +96,7 @@ class HAMqttDevice {
          * @brief send an available payload at the device availabality topic.
         */
         void sendAvailable();
+        void sendAvailable(bool available);
 
         EspMQTTClient* getClient();
 
