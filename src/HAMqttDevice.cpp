@@ -43,7 +43,7 @@ String HAMqttDevice::getConfigPayload(){
     s += serializerDict(_config, false);
 
     std::vector<String> list;
-    list.push_back(_mac_adress);
+    //list.push_back(_mac_adress); //If more than one device is created they will both have the same ID
     list.push_back(_identifier);
     String identifiers = serializerList(list, true);
     s += ",";
