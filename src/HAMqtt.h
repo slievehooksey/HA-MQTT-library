@@ -113,7 +113,7 @@ class HAMqttDevice {
 class HAMqttEntity {
     public:
         // see full list here: https://www.home-assistant.io/integrations/#search/mqtt
-        enum Component{ALARM_CONTROL_PANEL, BINARY_SENSOR, BUTTON, CAMERA, COVER, DEVICE_TRACKER, DEVICE_TRIGGER, FAN, HUMIDIFIER, HVAC, LIGHT, LOCK, SIREN, SENSOR, SWITCH, VACUUM};
+        enum Component{ALARM_CONTROL_PANEL, BINARY_SENSOR, BUTTON, CAMERA, COVER, DEVICE_TRACKER, DEVICE_TRIGGER, FAN, HUMIDIFIER, HVAC, LAWN_MOWER, LIGHT, LOCK, SIREN, SENSOR, SWITCH, VACUUM};
 
         /**
          * @brief Construct the entity object. Sending availability will only

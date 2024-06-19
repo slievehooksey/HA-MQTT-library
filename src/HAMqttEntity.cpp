@@ -119,6 +119,7 @@ String HAMqttEntity::componentToStr(Component component){
     case Component::FAN: return "fan";
     case Component::HUMIDIFIER: return "humidifier";
     case Component::HVAC: return "hvac";
+    case Component::LAWN_MOWER: return "lawn_mower";
     case Component::LIGHT: return "light";
     case Component::LOCK: return "lock";
     case Component::SIREN: return "siren";
