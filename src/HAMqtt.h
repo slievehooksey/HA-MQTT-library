@@ -9,7 +9,7 @@
   #include <WiFiClient.h>
 #endif
 
-#include "EspMQTTClient.h"
+//#include "EspMQTTClient.h"
 #include <vector>
 
 struct Dict{
@@ -38,14 +38,14 @@ class HAMqttDevice {
          * accentuated letters.
          * @param client The MQTT client object.
         */
-        HAMqttDevice(String device_name, EspMQTTClient& client);
+        //HAMqttDevice(String device_name, EspMQTTClient& client);
 
         /**
          * @brief Set the client object for the device.
          * 
          * @param client The MQTT client object.
         */
-        void setClient(EspMQTTClient& client);
+        //void setClient(EspMQTTClient& client);
 
         /**
          * @brief Add a custom config key value pair that will be used when
@@ -98,10 +98,10 @@ class HAMqttDevice {
         void sendAvailable();
         void sendAvailable(bool available);
 
-        EspMQTTClient* getClient();
+        //EspMQTTClient* getClient();
 
     private:
-        EspMQTTClient* _client;
+        //EspMQTTClient* _client;
         String _name;
         String _identifier;
         String _mac_adress;
@@ -114,7 +114,7 @@ class HAMqttDevice {
 class HAMqttEntity {
     public:
         // see full list here: https://www.home-assistant.io/integrations/#search/mqtt
-        enum Component{ALARM_CONTROL_PANEL, BINARY_SENSOR, BUTTON, CAMERA, COVER, DEVICE_TRACKER, DEVICE_TRIGGER, FAN, HUMIDIFIER, HVAC, LAWN_MOWER, LIGHT, LOCK, SIREN, SENSOR, SWITCH, VACUUM};
+        enum Component{ALARM_CONTROL_PANEL, BINARY_SENSOR, BUTTON, CAMERA, COVER, DEVICE_TRACKER, DEVICE_TRIGGER, FAN, HUMIDIFIER, HVAC, LAWN_MOWER, LIGHT, LOCK, NUMBER, SELECT, SENSOR, SIREN, SWITCH, TEXT, VACUUM};
 
         /**
          * @brief Construct the entity object. Sending availability will only
@@ -261,7 +261,7 @@ class HAMqttEntity {
         /**
          * @brief return the device's client.
         */
-        EspMQTTClient* getClient();
+        //EspMQTTClient* getClient();
 
     private:
         HAMqttDevice* _device;

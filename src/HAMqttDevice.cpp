@@ -11,13 +11,13 @@ HAMqttDevice::HAMqttDevice(String name){
     _identifier.toLowerCase();
 }
 
-HAMqttDevice::HAMqttDevice(String name, EspMQTTClient& client) : HAMqttDevice(name){
+/* HAMqttDevice::HAMqttDevice(String name, EspMQTTClient& client) : HAMqttDevice(name){
     setClient(client);
 }
 
 void HAMqttDevice::setClient(EspMQTTClient& client){
     _client = &client;
-}
+} */
 
 String HAMqttDevice::getAvailabilityTopic(){
     const String ha_topic = HA_TOPIC;
@@ -55,7 +55,7 @@ String HAMqttDevice::getConfigPayload(){
     return s;
 }
 
-void HAMqttDevice::manageAvailability(uint16_t keepAliveSecond){
+/* void HAMqttDevice::manageAvailability(uint16_t keepAliveSecond){
     if(!_client->isConnected()){
         return;
     }
@@ -75,4 +75,4 @@ void HAMqttDevice::sendAvailable(bool available){
 
 EspMQTTClient* HAMqttDevice::getClient(){
     return _client;
-}
+} */

@@ -93,13 +93,13 @@ String HAMqttEntity::getConfigPayload(){
     return s;
 }
 
-void HAMqttEntity::sendAvailable(){
+/* void HAMqttEntity::sendAvailable(){
     _device->getClient()->publish(getAvailabilityTopic(), "online");
 }
 
 EspMQTTClient* HAMqttEntity::getClient(){
     return _device->getClient();
-}
+} */
 
 HAMqttDevice* HAMqttEntity::getDevice(){
     return _device;
@@ -122,9 +122,12 @@ String HAMqttEntity::componentToStr(Component component){
     case Component::LAWN_MOWER: return "lawn_mower";
     case Component::LIGHT: return "light";
     case Component::LOCK: return "lock";
-    case Component::SIREN: return "siren";
+    case Component::NUMBER: return "number";
+    case Component::SELECT: return "select";
     case Component::SENSOR: return "sensor";
+    case Component::SIREN: return "siren";
     case Component::SWITCH: return "switch";
+    case Component::TEXT: return "text";
     case Component::VACUUM: return "vacuum";
     default: return "default";
     }
