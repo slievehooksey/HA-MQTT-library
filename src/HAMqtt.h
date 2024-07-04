@@ -29,7 +29,7 @@ class HAMqttDevice {
          * @param device_name The name of your device. It should not contains
          * accentuated letters.
         */
-        HAMqttDevice(String device_name);
+        HAMqttDevice(String device_name, String mac_address);
         /**
          * @brief Construct the device with the Client object. It allows
          * the use of manageAvailability and sendAvailable methods.

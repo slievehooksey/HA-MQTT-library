@@ -1,9 +1,9 @@
 #include <HAMqtt.h>
 
-HAMqttDevice::HAMqttDevice(String name){
+HAMqttDevice::HAMqttDevice(String name, String mac_address){
     _name = name;
 
-    _mac_adress = WiFi.macAddress();
+    _mac_adress = mac_address;
     _mac_adress.replace(":", "-");
 
     _identifier = name + _mac_adress.substring(12);
